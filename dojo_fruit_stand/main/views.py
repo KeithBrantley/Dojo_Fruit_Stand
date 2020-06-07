@@ -10,6 +10,7 @@ def checkout_page(request):
     return render(request, "checkout.html")
 
 def checkout(request):
+    print(request.POST)
     return HttpResponse('This is the checkout page')
 
 def check_total(request, check_out_total):
@@ -18,6 +19,5 @@ def check_total(request, check_out_total):
 def direct_to_index(request):
     print('I am going to the home page!')
     return redirect('/')
-
 
 
