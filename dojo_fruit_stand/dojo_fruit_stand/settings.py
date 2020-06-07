@@ -119,3 +119,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+# #################################################
+STATICFILES_FINDERS = (
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    #"django.contrib.staticfiles.finders.AppDirectoriesFinder"
+)
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+    '/main/templates/static',
+) 
+######################################################
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ]
+
+
+# C:\Users\keith\Documents\CodingDojo\python_stack\django\django_intro\Dojo_Fruit_Stand\dojo_fruit_stand\main\templates\static
